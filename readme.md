@@ -1,5 +1,19 @@
 # Room Presence
 This automates turning on and off entities based on a trigger like one or more presence or door sensors but can be any entity. After the timeout expires it will turn off the entities.
+
+## Installation
+
+Setup NetDaemon runtime - https://netdaemon.xyz/docs/started/installation
+
+### HACS
+1. Add this repo as a custom repository and select Integration type
+2. Click Install
+3. Restart NetDaemon
+
+### Manual Setup
+1. Copy the files from this repo into apps/RoomPresence folder
+2. Restart NetDaemon
+
 ## Config
 
 ### Basic
@@ -55,7 +69,6 @@ presence:
 |`lux_limit`|When the lux is below this threshold your control entities will turn on|Int|Optional<br><br>Default: 40<br><br>This is a configurable lux threshold and will take precedence `lux_limit_entity_id`|
 |`lux_limit_entity_id`|When the lux is below this threshold your control entities will turn on|String|Optional<br><br>This is an Entity that provides the lux threshold|
 |`circadian_switch_entity_id`|This disables Circadian Lighting by switching off the Entity when the Brightness/Colour Temp is changed manually|String|Optional<br><br>Re-enables once Room state is Idle|
-||
 
 ## Room Presence States
 - **Idle**<br>When there is no Presence
